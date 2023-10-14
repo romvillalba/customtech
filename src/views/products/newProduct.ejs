@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('../partials/head')  %>
+
+<body>
+
+    <%-include('../partials/header')  %>
+
+    <main class="form-product-container">
+
+        <div class="bloque-prod">
+
+            <form class="form-product" action="/products/<%= (locals.editProduct) ? editProduct.id+'?_method=PUT' : '' %>" method="post" enctype="multipart/form-data"> 
+
+                <h2><%= (locals.editProduct) ? "Editar" : "Nuevo" %> producto</h2>
+
+                <% if (locals.editProduct) { %>
+                    <input type="hidden" name="id" value=<%= editProduct.id %> >
+                    <input type="hidden" name="borrado" value=<%= editProduct.borrado %> >
+                <% } %>
+                
+                <div>
+                    <input class="text-field-product" id="product-name" type="text" name="name" placeholder="Nombre del producto" <% if (locals.editProduct) {%> value="<%= editProduct.name %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.name %>"<%} %> >
+                </div>
+                <div>
+                    <% if(locals.errors && errors.name) { %>
+                        <p> <%= errors.name.msg %> </p>
+                    <% } %>
+                </div>
+
+                <div>
+                    <input class="text-field-product" id="product-desc" type="text" name="descripcion" placeholder="Descripción" <% if (locals.editProduct) {%> value="<%= editProduct.description %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.descripcion %>"<%} %> >
+                </div>
+                <div>
+                    <% if(locals.errors && errors.descripcion) { %>
+                        <p> <%= errors.descripcion.msg %> </p>
+                    <% } %>
+                </div>
+                
+
+                <div class="product-file-container">
+                    <label class="product-label-file" for="image">Agregar imagenes</label>
+                    <input id="product-image" type="file" name="image">
+                </div>
+                <div>
+                    <% if(locals.errors && errors.image) { %>
+                        <p> <%= errors.image.msg %> </p>
+                    <% } %>
+                </div>
+
+                <div class="cantidad-product-container">
+                    <label for="product-cantidad">Cantidad</label>
+                    <input class="text-field-product product-cantidad" type="text" name="productCantidad" id=""  placeholder="cantidad" <% if (locals.editProduct) {%> value="<%= editProduct.stock %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.productCantidad %>"<%} %> >
+                </div>
+                <div>
+                    <% if(locals.errors && errors.productCantidad) { %>
+                        <p> <%= errors.productCantidad.msg %> </p>
+                    <% } %>
+                </div>
+
+                
+                <div class="product-description">
+                    
+                    <div class="categories-container">
+                        
+                        <label class="categorias" for="categories">Categorias</label>
+                        
+                        <select class="product-categories" name="categories" id="" >
+                            <% categorias.forEach(element => { %>
+                                <option  class="product-categories-options" value="<%= element.id %>" <%= locals.editProduct && locals.editProduct.id_category == element.id ? 'selected' : '' %> ><%= element.name %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    
+                    
+                </div>
+
+                
+                <div>
+                    <input class="text-field-product" id="product-price" type="text" name="precio" placeholder="Precio" <% if (locals.editProduct) {%> value="<%= editProduct.price %>"<%} %> <% if (locals.oldReq) {%> value="<%= oldReq.precio %>"<%} %> >
+                </div>
+                <div>
+                    <% if(locals.errors && errors.precio) { %>
+                        <p> <%= errors.precio.msg %> </p>
+                        <% } %>
+                </div>
+
+                    <ul class="erroresLista"></ul>
+
+                <div class="button-products">
+                    <button><%= (locals.editProduct) ? "Modificar" : "Agregar" %></button>
+                    <button><a href="/">Cancelar</a></button>
+                </div>
+
+
+            </form>
+            <% if (locals.editProduct) { %>
+                <form method="POST" action="/products/<%= editProduct.id %>?_method=DELETE">
+                    <button class="delete-button" type="submit">BORRAR</button> 
+                  </form>
+            <% } %>
+            
+
+        </div>
+
+    </main>
+    <script src="/js/product.js"></script>
+    <script src="/js/header.js" ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>   
+    <%-include('../partials/footer')  %>
+
+</body>
+
+</html>

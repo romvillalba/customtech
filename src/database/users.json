@@ -1,0 +1,165 @@
+[
+  {
+    "id": 1,
+    "nombreCompleto": "Jacques",
+    "email": "jcrossland0@usnews.com",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": false,
+    "imagen": "/images/avatars/pletzale.jpg",
+    "tipoPerfil": "usuario"
+  },
+  {
+    "id": 2,
+    "nombreCompleto": "Conni",
+    "email": "cclapshaw1@flickr.com",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": true,
+    "imagen": "",
+    "tipoPerfil": "usuario"
+  },
+  {
+    "id": 3,
+    "nombreCompleto": "Michell",
+    "email": "mmerill2@theglobeandmail.com",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": false,
+    "imagen": "/images/avatars/polloCorazon.jpg",
+    "tipoPerfil": "admin"
+  },
+  {
+    "id": 4,
+    "nombreCompleto": "Aluino",
+    "email": "abrimmell3@exblog.jp",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": false,
+    "imagen": "/images/avatars/pretzel.jpg",
+    "tipoPerfil": "admin"
+  },
+  {
+    "id": 5,
+    "nombreCompleto": "Clo",
+    "email": "celven4@paypal.com",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": true,
+    "imagen": "/images/avatars/pletzale.jpg",
+    "tipoPerfil": "admin"
+  },
+  {
+    "id": 6,
+    "nombreCompleto": "Dan",
+    "email": "djardein5@issuu.com",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": false,
+    "imagen": "",
+    "tipoPerfil": "usuario"
+  },
+  {
+    "id": 7,
+    "nombreCompleto": "York",
+    "email": "ybilliard6@cnn.com",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": false,
+    "imagen": "/images/avatars/polloCorazon.jpg",
+    "tipoPerfil": "admin"
+  },
+  {
+    "id": 8,
+    "nombreCompleto": "Nanice",
+    "email": "nlukas7@google.de",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": true,
+    "imagen": "/images/avatars/polloCorazon.jpg",
+    "tipoPerfil": "usuario"
+  },
+  {
+    "id": 9,
+    "nombreCompleto": "Hendrik",
+    "email": "htreby8@hp.com",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": true,
+    "imagen": "/images/avatars/kipa.jpg",
+    "tipoPerfil": "usuario"
+  },
+  {
+    "id": 10,
+    "nombreCompleto": "Holly-anne",
+    "email": "hmclarens9@furl.net",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": false,
+    "imagen": "/images/avatars/pretzel.jpg",
+    "tipoPerfil": "admin"
+  },
+  {
+    "id": 11,
+    "nombreCompleto": "Devlin",
+    "email": "dhenrota@independent.co.uk",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": false,
+    "imagen": "/images/avatars/pretzel.jpg",
+    "tipoPerfil": "usuario"
+  },
+  {
+    "id": 12,
+    "nombreCompleto": "Darbie",
+    "email": "dmilleab@goodreads.com",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": false,
+    "imagen": "/images/avatars/pletzale.jpg",
+    "tipoPerfil": "admin"
+  },
+  {
+    "id": 13,
+    "nombreCompleto": "Brendin",
+    "email": "bradinc@booking.com",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": true,
+    "imagen": "",
+    "tipoPerfil": "admin"
+  },
+  {
+    "id": 14,
+    "nombreCompleto": "Ely",
+    "email": "enissled@yandex.ru",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS",
+    "borrado": false,
+    "imagen": "/images/avatars/pletzale.jpg",
+    "tipoPerfil": "admin"
+  },
+  {
+    "id": 15,
+    "nombreCompleto": "Arlie",
+    "email": "aroddelle@desdev.cn",
+    "borrado": true,
+    "imagen": "",
+    "tipoPerfil": "usuario",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS"
+  },
+  {
+    "id": 16,
+    "nombreCompleto": "",
+    "email": "rm@x.a",
+    "image": "",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS"
+  },
+  {
+    "id": 17,
+    "nombreCompleto": "romina",
+    "email": "rm@x.a",
+    "image": "39251-WaterArtistic-Neon-4k-Ultra-HD-Wallpaper.jpg",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS"
+  },
+  {
+    "id": 18,
+    "nombreCompleto": "cande",
+    "email": "cv@d.s",
+    "image": "1690154295307.jpeg",
+    "contrasenia": "$2b$10$xQ.yVVjJT39bpuR1gwVuU.S6tj.Grefskq.DOUHfujl6EJ6uVmVIS"
+  },
+  {
+    "id": 19,
+    "nombreCompleto": "nicolas",
+    "email": "nico1432@gmail.com",
+    "image": "1690855072689.jpg",
+    "contrasenia": "$2b$10$rYZXzdDZFmmxeJbSLq/L3OSlHjtvFg63J6nhz6.BraWlLpBhYG13i"
+  }
+]

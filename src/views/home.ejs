@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head'); %>
+<body>
+
+    <%- include('partials/header'); %>
+
+<main class="main-home">
+<!-- Carrusel -->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="/images/2D0B2272-465A-462F-BE02-CE449D13CC4D.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+      
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="/images/fwebp.webp" style="width:100%">
+          <div class="text"></div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img src="/images/36C9D7B8-7A13-4B1E-9F82-DEADF6D58A78.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+<!-- 
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+      </div>
+      
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+    </div>   
+
+<!-- Fin Carrusel -->
+
+<!-- Inicio de Cajas de Productos -->
+<div class="list-a">
+  <h3>Lista de productos</h3>
+  <a href="/products" class="list-product">  Ver mas </a>
+  
+</div>
+<h4 class="product-recomended-title"> Productos recomendados</h4>
+
+<div class="contenedor-main">
+  <% productos.forEach(function(p){ %>
+      <%- include('partials/tarjetasProductosHomeDetalle', {producto: p}); %>
+  <% }); %>
+</div>
+
+
+</main>
+<%- include('partials/footer') %>
+
+
+<script src="/js/header.js"></script>
+<script src="/js/home.js" ></script>
+<script src="/js/funCartWish.js" ></script>
+
+</body>
+</html>

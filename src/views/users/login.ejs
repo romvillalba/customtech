@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head'); %>
+
+<body>
+    <%- include('../partials/header'); %>
+
+
+    <main class="login">
+
+
+        <div class="bloqueLogin">
+
+            <form class="form-login" action="/users/login" method="post">
+
+                <div class="icon-register">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+
+                <div>
+                    <input id="email" class="text-field" type="email" name="email" placeholder="E-mail">
+                </div>
+
+                <div>
+                    <% if(locals.errors && errors.email) { %>
+                        <p class="error-login"> <%= errors.email.msg %> </p>
+                    <% } %>
+                </div>
+
+                <div>
+                    <input id="password" class="text-field" type="password" name="contrasenia" placeholder="Contraseña">
+                </div>
+                <div>
+                    <% if(locals.errors && errors.contrasenia) { %>
+                        <p class="error-login"> <%= errors.contrasenia.msg %> </p>
+                    <% } %>
+                </div>
+
+                <div class="login-recordar">
+                    <legend class="recordarme">
+                        <label class="switch">
+                            <input type="checkbox" name="recordame" id="recordame">
+                            <span class="slider round"></span>
+                        </label>
+                        <label>Recordarme</label>
+                    </legend>
+                </div>
+                
+                
+                <ul class="erroresLista"></ul>
+
+                <div class="buttons">
+                    <button class="botonSubmit" type="submit">Ingresar</button>
+                    <div class="bloqueSignup">
+                        <legend>
+                            ¿No tienes cuenta?
+                        </legend>
+
+                        <a href="/register" class="botonSignup">Regístrate</a>
+
+                        
+                    </div>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </main>
+    <script src="/js/login.js"></script>
+    <script src="/js/header.js" ></script>
+
+    <%- include('../partials/footer'); %>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+/* Header */
+@import url('./styles-header.css');
+/* footer */
+@import url('./styles-footer.css');
+/* Carrito y Whislist */
+/* @import url('./styles-carrito-whislist.css'); */
+/* Registro */
+/* @import url('./styles-register.css'); */
+/* Home */
+/* @import url('./styles-home.css'); */
+/* Login */
+/* @import url('./styles-login.css'); */
+/* Producto */
+/* @import url('./styles-product.css'); */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Play', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.erroresLista {
+    color: red;
+    list-style: none;
+    text-align: start;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head'); %>
+
+<body>
+
+    <%- include('../partials/header'); %>
+
+    <main>
+
+
+        <div class="bloqueSignup">
+
+            <form class="form-signup" action="/users/register" method="post" enctype="multipart/form-data">
+
+                <div class="icon-register">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+
+                <div>
+                    <input id="register-name" class="text-field" type="text" name="nombre" placeholder="Nombre completo">
+                </div>
+                <% if(locals.errors && errors.nombre) { %>
+                    <p class="error-register"> <%= errors.nombre.msg %> </p>
+                    <% } %>
+
+                <div>
+                    <input id="register-email" class="text-field" type="email" name="email" placeholder="E-mail" value="<%= locals.oldData ? oldData.email : null %>">
+                </div>
+                <% if(locals.errors && errors.email) { %>
+                    <p class="error-register"> <%= errors.email.msg %> </p>
+                <% } %>
+
+                <div>
+                    <input id="register-passw" class="text-field" type="password" name="contrasenia" placeholder="Contraseña" value="<%= locals.oldData ? oldData.contrasenia : null %>">
+                </div>
+
+                <% if(locals.errors && errors.contrasenia) { %>
+                    <p class="error-register"> <%= errors.contrasenia.msg %> </p>
+                <% } %>
+                
+                <ul class="passw-debe-tener">
+                    <li class="passw-debe-tener">La contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un símbolo</li>
+                </ul>
+
+                <div class="fotoPerfil">
+                    <label class="fotoperfil" for="fotoPerfil">Agregar imagen</label>
+                    <input  class="input-file" type="file" name="fotoPerfil" id="fotoPerfil">
+                </div>
+                <% if(locals.errors && errors.fotoPerfil) { %>
+                    <p class="error-register"> <%= errors.fotoPerfil.msg %> </p>
+                <% } %>
+               
+
+                <ul class="erroresLista"></ul>
+
+                <div class="buttons">
+                    <button class="botonSubmit" type="submit">Registrarme</button>
+                    <div class="bloqueLogin">
+                        <legend>
+                            ¿Ya tienes una cuenta?
+                        </legend>
+
+                        <a href="/login" class="botonLogin">Ingresá</a>
+                        
+                    </div>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </main>
+    <script src="/js/register.js"></script>
+    <script src="/js/header.js" ></script>
+
+    <%- include('../partials/footer'); %>
+
+</body>
+</html>
+

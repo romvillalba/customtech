@@ -1,0 +1,92 @@
+<header>
+    <div class="header-container">
+        <a class="header-image-container" href="/">
+            <img class="header-img" src="/images/favicon.ico" alt="Custom tech">
+            <h2>CUSTOMTECH</h2>
+        </a>
+        <div class="burger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="menu-hidden">
+            <div class="menu-list">
+                <% if (locals.isLoged) { %>
+                        <div class="image-logged-container">
+                            <div>
+                                <img src="/images/<%= locals.userLog.image %>" alt="">
+                                <h4 class="image-logged-title"><%= locals.userLog.name %></h4>
+                            </div>
+                            <div class="logOut">
+                                <a href="/logOut"> Cerrar Sesion</a>
+                            </div>
+                        </div>
+                        
+                    <% }else { %>
+                        <div class="icon-container login-burger">
+                            <i class="fa-solid fa-user"></i>
+                    <% } %>
+                            <div class="login-modal">
+                                <h4><a href="/login">Login</a></h4>
+                                <h4><a href="/register">Registrarse</a></h4>
+                            </div>
+                        </div>
+
+                        
+                <div class="icon-container">
+                    
+                   <a href="/productWishList"> <i class="fa-solid fa-heart"></i> Wish List </a>
+                </div>
+                
+                <div class="icon-container">
+                    <a href="/productCart"> <i class="fa-solid fa-cart-shopping"></i> Carro</a>
+                </div>
+
+                <form  class="search-menu" action="/products/search" method="post">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" name="txtSearch" placeholder="Buscar..." class="header-search-input">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="search">
+            <form  class="search-menu" action="/products/search" method="post">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="txtSearch" placeholder="Buscar..." class="header-search-input">
+            </form>
+    </div>
+    <nav class="header-nav-container">
+            <div class="image-header-login" >
+                <% if(locals.isLoged) { %>
+                    <div class="modal-header">
+                        <a href="/perfil">Perfil</a>
+                        <a href="/logOut">Cerrar Sesion</a>
+                    </div>
+                    <img src="/images/<%= locals.userLog.image %>" alt="">
+                    <h4>Hola, <%= locals.userLog.name %></h4>
+                </div>
+            <% } else { %>
+            <ul>
+                <li><a href="/login"><i class="fa-solid fa-user"></i></a></li>
+                
+            <% } %>
+            <li><a href="/productWishList"> <i class="fa-solid fa-heart"></i></a></li>
+            <li><a class="cart"  href="/productCart"> <i class="fa-solid fa-cart-shopping"></i></a></li>
+            
+            <!-- DAtos de la wish list y del carrito  -->
+            <% if(locals.isLoged) { %>
+                <div id="datosWishCart">
+                        <p id="wishdata" class="wishdata"></p>
+                        <p id="cartdata" class="cartdata"></p>
+                    </div> 
+                    <script type="text/javascript">
+                        recargaDatosWishCart();
+                    </script>
+                <%} %>
+
+                <!-- DATOS DE LA WISH LIST Y DEL CARRITO  -->
+            </ul>
+    </nav>
+    </div>
+    <section class="header-categories">
+        <h4>Categorias <i class="fa-solid fa-chevron-down"></i> </h4>
+    </section>
+</header>

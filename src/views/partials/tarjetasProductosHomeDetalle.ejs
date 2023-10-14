@@ -1,0 +1,8 @@
+<a class="sub-main" href="/products/<%= producto.id %>">
+    <i class="fa-regular fa-heart corazon"  onclick= <% if(locals.isLoged) { %>"agregarItemAWishDesdeIcono(<%= JSON.stringify(producto) %>)" <% } %> ></i>
+    <img class=productos src="/images/<%= producto.image %>" alt="Imagen principal">
+    <div class="sub-main-descripcion">
+    <p class="descripciones"><strong><%= producto.name %></strong></p>
+    <p class="precios">$<%= producto.price %></p>
+    </div>
+</a>

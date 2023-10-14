@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head'); %>
+<body>
+
+    <%- include('../partials/header'); %>
+
+    <div class="list-products">
+    <% if(product.length!=0) { %>
+    <% product.forEach((row) => {  %>
+        <div class="sub-main"> 
+            <i class="fa-regular fa-heart" onclick= <% if(locals.isLoged) { %>"agregarItemAWishDesdeIcono(<%= JSON.stringify(row) %>)" <% } %>></i>
+            <a href="/products/<%= row.id %>">
+                <div class="image-list-container">
+                    <img class="" src="/images/<%= row.image %>" alt="<%= row.image %>">
+                </div>
+                <div class="info-list">
+                    <h2 class="nombre"><%= row.name %></h2>
+                    <p class="precio">$<%= row.price %></p>
+                </div>
+                <div class="contenedor-boton-carrito">
+                    <a type="button" class="agregar-carrito" <% if(locals.isLoged) { %>onclick="agregarItemACarritoDesdeBoton(<%= JSON.stringify(row) %>)" <% } else { %> href="http://localhost:3007/login" <% } %> value="Agregar al carrito">
+                        Agregar al carrito
+                        <i class="fa-solid fa-cart-shopping icon"></i>
+                    </a>
+                </div>
+            </a>
+        </div>
+    
+        <% })} else { %>
+            <main class="listProdVac">
+            <div class="vacio" ><strong>Busqueda sin resultados</strong><a href="/products" > Ver Productos </a></div>
+            </main>
+        <% }; %>
+    </div>
+
+
+</main>
+<script src="/js/header.js" ></script>
+<script src="/js/funCartWish.js" ></script>
+
+<%- include('../partials/footer'); %>
+
+</body>
+</html>
+
+

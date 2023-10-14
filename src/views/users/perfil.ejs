@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+
+  <body>
+    <%- include('../partials/header.ejs') %>
+      <section class="perfil-container">
+        <div class="primer-contenedor">
+          <img src="/images/<%= user.image %>" alt="<%= user.name %>">
+        </div>
+        
+          <section class="datos">
+            <h3><strong>INFORMACION PERSONAL</strong></h3>
+          </section>
+
+          <div class="perfil-data">
+           <form class="form-perfil" action="/users/<%= user.id%>/edit" method="post" enctype="multipart/form-data">
+            <div class="input-container">
+              <h4>Nombre de Usuario</h4>
+              <input
+                class="text-field-perfil"
+                type="text"
+                name="nombre"
+                placeholder="Nombre completo"
+                value="<%= user.name %>">
+                 <% if(locals.errors && errors.nombre) { %>
+                   <p>
+                     <%= errors.nombre.msg %>
+                   </p>
+                   <% } %>
+            </div>
+              <div class="input-container">
+                <h4>Email</h4>
+                <input class="text-field-perfil" type="email" name="email" placeholder="E-mail"
+                    value="<%= user.email %>">
+                        <% if(locals.errors && errors.email) { %>
+                          <>
+                            <%= errors.email.msg %>
+                          </p>
+                          <% } %>
+              </div>
+              <h4>Agregar imagen</h4>
+              <input class="input-file" type="file" name="fotoPerfil" id="fotoPerfil">
+              <div class="input-container">
+                <h4>Clave</h4>
+               <input
+                class="text-field-perfil"
+                type="password"
+                name="contrasenia"
+                placeholder="Contraseña">
+                <% if(locals.errors && errors.contrasenia) { %>
+                <p>
+                <%= errors.contrasenia.msg %>
+                </p>
+                <% } %>
+              </div>
+              <div>
+                <button class="button-submit" type="submit">Editar</button>
+              </div>
+            </form>
+            <div class="button-container" >
+    
+              <form action="/users/<%= user.id%>/delete?_method=DELETE" method="post">
+                <button class="button-submit" type="submit">Eliminar</button>
+              </form>
+            </div>
+            <div class="button-create">
+              <% if (user && user.id_profile === 2) { %>
+              <div>
+                <a class="button-submit-create"  href="/products/create">Cargar Producto</a>
+              </div>
+              <% } %>
+            </div>
+          </div>
+      </section>
+
+
+      <%- include('../partials/footer.ejs') %>
+<script src="/js/header.js" ></script>
+
+  </body>
+
+</html>

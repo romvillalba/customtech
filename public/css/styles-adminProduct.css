@@ -1,0 +1,195 @@
+.form-product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    background-color: #eee;
+    height: 800px;
+}
+
+.form-product-container a {
+    color: #fff;
+}
+
+.bloque-prod {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 80vw;
+    margin-top: 5vh;
+    text-align: center;
+    margin-bottom: 10%;
+    color: grey;
+    height: inherit;
+}
+
+h2 {
+    color:#4F04A3;
+    margin-bottom: 10% ;
+}
+
+.form-product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.form-product div {
+    margin-bottom: 10px;
+    border-radius: 5%;
+    margin-top: 2%;
+}
+
+.text-field-product {
+    /* padding: 10%; */
+    border-radius: 5px;
+    padding: 5%;
+    width: 50vw;
+    background-color: #ffffff;
+    border: 1px solid #4F04A3;
+    color: #4F04A3;
+    
+}
+
+.categories-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.categories-container label {
+    margin-bottom: 10px;
+}
+
+.product-categories {
+    width: 50vw;
+    padding: 2%;
+    color: #fff;
+    background-color: #4F04A3;
+    border: 1px solid #fff;
+    border-radius: 5px;
+
+}
+
+.product-categories-options {
+    color: #eee;
+}
+
+.product-file-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60px;
+}
+
+.cantidad-product-container  {
+    display: flex;
+    background-color: #4F04A3;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.cantidad-product-container label {
+    padding: 5px;
+    font-size: 12px;
+
+}
+
+
+.product-cantidad {
+    width: 20vw;
+    height: 25px;
+    
+}
+
+.general {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.general label {
+    margin-bottom: 5px;
+}
+
+.button-products {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+}
+
+.button-products button {
+    width: 100px;
+    height: 25px;
+    color: #ffffff;
+    background-color: #4F04A3;
+    border-radius: 5px;
+    border: 1px solid #4F04A3;
+    margin: 10px;
+}
+
+.delete-button {
+    width: 100px;
+    height: 25px;
+    color: #ffffff;
+    background-color: #4F04A3;
+    border-radius: 5px;
+    border: 1px solid #4F04A3;
+}
+
+.product-label-file {
+    color: #4F04A3;
+}
+
+.categorias {
+    color: #4F04A3;
+}
+
+@media (min-width: 361px) {
+    .bloque-prod {
+        margin: auto;
+    }
+
+    .text-field-product {
+        width: 300px;
+    }
+
+    .cantidad-product-container input {
+        width: 150px;
+    }
+
+    .product-categories {
+        width: 300px;
+    }
+}
+
+@media (min-width: 769px) {
+
+
+    .button-products {
+        flex-direction: row;
+    }
+
+    .form-product-container {
+        background-color: #fff;
+    }
+
+    .bloque-prod {
+        box-shadow: 0px 0px 15px rgba(70, 70, 70, 0.9);
+        border-radius: 25px;
+        width: 400px;
+        background-color: #eee
+    }
+
+}

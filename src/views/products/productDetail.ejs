@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs'); %>
+<body>
+  <%- include('../partials/header.ejs'); %>
+      <!-- <main>
+        <script>
+          function changeMainImage(image) {
+            var mainImage = document.getElementById('main-image');
+            mainImage.src = image.src
+          }
+        </script> -->
+
+
+
+    <div class="product-container">
+
+
+      <div class="product-detail-title">
+        <h1><%= editProduct.name %> </h1>
+      </div>
+ 
+      <!-- <div class="image-list"> -->
+      
+      
+        <!-- <img src="/images/<%= editProduct.image %>" alt="Imagen 2" onmouseover="changeMainImage(this)">
+        <img src="/images/<%= editProduct.image %>" alt="Imagen 3" onmouseover="changeMainImage(this)">
+        <img src="/images/<%= editProduct.image %>" alt="Imagen 4" onmouseover="changeMainImage(this)"> -->
+
+      <!-- </div> -->
+
+      <div class="product-container-image">
+
+    
+      <div class="detail-image-container">
+        <img id="main-image"  src="/images/<%= editProduct.image %>" alt="Imagen Principal">   
+      </div>
+       <div class="icono-corazon">
+        <!-- <i class="fas fa-regular fa-heart" onclick=<% if(locals.isLoged) { %>"agregarProductoAWishList(<%= editProduct.id %>, <%= locals.userLog.id %>)<%} else {%> irALogin() <%} %>"></i> -->
+        <i class="fas fa-regular fa-heart cocoro" onclick= <% if(locals.isLoged) { %>"agregarItemAWishDesdeIcono(<%= JSON.stringify(editProduct) %>)" <% } %> ></i>
+       </div>
+
+  </div>
+
+
+    <div class="product-icons">
+      <div class="product-price">
+        <h2>$ <%= editProduct.price %></h2>
+        <!-- <form class="Agregar" action="/productCart" method="GET"> -->
+          <button class="Agregar agregar-carrito" onclick=<% if(locals.isLoged) { %>"agregarItemACarritoDesdeBoton(<%= JSON.stringify(editProduct) %>)"<%} else {%> "irALogin() "<%} %> type="button">Agregar al carrito</button>
+        <!-- </form> -->
+    
+        <p><%= editProduct.stock %> STOCK EN LA WEB </p>
+        <p><i class="fas fa-solid fa-check"></i>STOCK EN EL LOCAL</p>
+        <p><i class="fas fa-solid fa-store"></i>RETIRO ¡GRATIS!</p>
+        <p><i class="fas fa-solid fa-truck"></i>ENVIO</p>
+        
+      </div>
+    
+      <div class="product-detail-description">
+      
+          <div >
+            
+            <h3 >Descripcion</h3>
+            <p><%= editProduct.description %> </p>
+          </div>
+          <div>
+            <% if (currentUser && currentUser.id_profile === 2) { %>
+              <form class="Agregar" action="/products/<%= editProduct.id %>/edit" method="get">
+                <button class="Agregar" type="submit">EDITAR</button>
+              </form>
+            <% } %>
+          </div>
+      </div>
+    </div>
+
+<h4 class="product-recomended-title"> Productos recomendados</h4>
+    
+    <div class="contenedor-main">
+      <% products.forEach(function(p){ %>
+        <%- include('../partials/tarjetasProductosHomeDetalle', {producto: p}); %>
+      <% }); %>
+    </div>
+
+
+
+  <%- include('../partials/footer'); %>
+  <script src="/js/header.js" ></script>
+  <script src="/js/funCartWish.js" ></script>
+
+</body>
+
+</html>

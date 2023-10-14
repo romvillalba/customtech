@@ -1,0 +1,37 @@
+<h3></h3>
+<article class="tarjeta-producto <%= producto.id %>">
+    <i class="fa-sharp fa-solid fa-heart corazon-whislist"></i>
+    <i class="fa-solid fa-cart-shopping carrito-whislist" onclick="agregarItemDesdeWish(<%= producto.id %>)"></i>
+    <!-- <i class="fa-solid fa-cart-shopping carrito-whislist .agregarCarritoDesdeWish"></i> -->
+    <i class="fa fa-trash tacho-basura" onclick="quitarProductoWhislist(<%= producto.id %>)" aria-hidden="true"></i>
+    <input type="hidden" name="idProducto" value="<%= producto.id %>">
+    <div class="tarjeta-producto-cabecera">
+        <div class="tarjeta-producto-cabecera-imagen">
+            <img src="/images/<%=producto.image %>" alt="imagen-producto-1">
+        </div>
+        <div class="tarjeta-producto-titulo-descripcion">
+            <legend><%= producto.name %></legend>
+            <p><%= producto.description %></p>
+        </div>
+    </div>
+    <div class="tarjeta-producto-detalle">
+        <div class="tarjeta-producto-detalles">
+            <div class="tarjeta-producto-detalle-titulos">
+                <!-- <div class="tarjeta-producto-detalle-item">
+                    <label>Color</label>
+                    <div class="caracteristica">
+                        <%= producto.description %>
+                    </div>
+                </div> -->
+                <div class="tarjeta-producto-detalle-item">
+                    <label for="precio">Precio</label>
+                    <label id="precio">$<%= producto.price %></label>
+                </div>
+                <!-- <div class="tarjeta-producto-detalle-item">
+                    <label for="precio">SubTotal</label>
+                    <label id="precio">$<%= producto.precio*producto.cantidad %></label>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</article>

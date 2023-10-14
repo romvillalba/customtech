@@ -1,0 +1,278 @@
+.main-home {
+  margin-top: 100px;
+}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position:relative;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: none; /* inline-block; */
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+/* @media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+} */
+.contenedor-main{
+    max-width: 1200px;
+    width: 100vw;
+    padding: 15px;
+    margin: auto;
+    margin-top: -4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.sub-main{
+    /* display: block; */
+    background-color: white;
+    width: 100%;
+    border: solid 1px #ebebeb;
+    margin: auto;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    transition: all 450ms;
+}
+
+.corazon {
+  color: #4F04A3;
+  font-size: 20px;
+  border-radius: 50%;
+  margin: 10px;
+  transition: all 0.4s;
+}
+
+
+
+.sub-main-descripcion{
+    position: relative;
+    padding: 0 15px 0 15px;
+    text-align: center;
+}
+.productos {
+    width: 100%;
+    border-bottom: solid 1px #ebebeb;
+    margin: auto;
+    border-radius: 10px;
+    transition: all 450ms;
+}
+.cuerpos-de-texto {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+.titulares {
+    font-size: 24px;
+    width: 95%;
+    color: #666;
+}
+.precios{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.descuentos {
+    font-size: 18px;
+    color: #39b54a;
+    font-style: normal;
+    margin-left: 10%;
+}
+.descripciones{
+    font-size: 12px;
+    margin-bottom: 15px;
+    color: #4F04A3;
+    transition: all 450ms;
+}
+.destacado {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+
+.list-product {
+  color: #4F04A3;
+  font-size: 15px;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.list-product:hover {
+  color: #4F04A3;
+  background-color: #fff;
+}
+
+.product-recomended-title {
+  color: #4F04A3;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+
+.list-a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #4F04A3;
+  width: 100%;
+  height: 100px;
+  color: #fff;
+}
+
+.list-a h3 {
+  margin: 10px;
+}
+
+.list-a a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 10px;
+
+}
+
+
+@media (min-width: 361px){
+
+  .corazon:hover {
+    background-color: #4F04A3;
+    color: #fff;
+    padding: 10px;
+  }
+    /* .destacado {
+        text-align: right;
+        width: 30%;
+        font-size: 11px;
+    } */
+
+
+    
+
+    .list-a {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .sub-main {
+        width: 45%;
+        flex-wrap: wrap;
+        margin: 5px;
+    }
+
+
+    
+    .sub-main:hover{
+        box-shadow: 0px 0px 10px #4F04A3;
+    }
+    .sub-main:hover .descripciones{
+        display: block;
+    }
+    .sub-main:hover .fa-truck{
+        box-shadow: 0px 0px 10px #39b54a;
+        transform: rotateX(360deg);
+    }
+   
+}
+
+
+@media(min-width: 769px){
+
+  .main-home {
+    margin-top: 60px;
+  }
+ 
+
+  .sub-main {
+      width: 20%;
+  }
+  .destacado {
+      font-size: 18px;
+  }
+}
+

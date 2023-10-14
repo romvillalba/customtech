@@ -1,0 +1,55 @@
+    <article class="tarjeta-producto <%= producto.id %>">
+        <i class="fa fa-trash tacho-basura" aria-hidden="true" onclick="quitarProductoCarrito(<%= producto.id %>, <%= locals.userLog.id %>)"></i>
+        <div class="tarjeta-producto-cabecera">
+            <div class="tarjeta-producto-cabecera-imagen">
+                <img src="/images/<%=producto.image %>" alt="imagen-producto-1">
+            </div>
+            <div class="tarjeta-producto-titulo-descripcion">
+                <legend>
+                    <%= producto.name %>
+                </legend>
+                <!-- <p>
+                    <%= producto.description %>
+                </p> -->
+            </div>
+        </div>
+        <div class="tarjeta-producto-detalle">
+            <div class="tarjeta-producto-detalles">
+                <div class="tarjeta-producto-detalle-titulos">
+                    <!-- <div class="tarjeta-producto-detalle-item">
+                        <label>
+                            Color
+                        </label>
+                        <div class="caracteristica">
+                            <i class="fa fa-circle" aria-hidden="true"></i>
+                            <label>
+                                Negro
+                            </label>
+                        </div>
+                    </div> -->
+                    <div class="tarjeta-producto-detalle-item">
+                        <label class="cantidad">Cantidad</label>
+                        <div class="contador-cantidad">
+                            <input type="button" class="contador-cantidad-menos" id="contador-cantidad-menos-<%= producto.id %>"
+                            onclick="restar('contador-cantidad-input-',<%= producto.id %>, <%= producto.price %>, <%= locals.userLog.id %>)" value="-">
+                            <input name="cantidad" type="text" class="contador-cantidad-input" id="contador-cantidad-input-<%= producto.id %>" value="<%= producto.ProductCart.dataValues.amount %>">
+                            <input type="button" class="contador-cantidad-mas" id="contador-cantidad-mas-<%= producto.id %>"
+                            onclick="sumar('contador-cantidad-input-',<%= producto.id %>, <%= producto.price %>, <%= locals.userLog.id %>)" value="+">
+                        </div>
+                    </div>
+                    <div class="tarjeta-producto-detalle-item">
+                        <label>Precio</label>
+                        <label id="precio">
+                            $<%= producto.price %>
+                        </label>
+                    </div>
+                    <div class="tarjeta-producto-detalle-item">
+                        <label>SubTotal</label>
+                        <label id="precio" class="subtotal subtotal-<%= producto.id %>">
+                            $<%= producto.price*producto.ProductCart.dataValues.amount %>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>

@@ -1,0 +1,158 @@
+footer {
+    width: 100vw;
+    background-color: #4F04A3;
+    color: #fff;
+}
+
+
+
+.section-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section-footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.section-footer li {
+    list-style-type: none;
+}
+
+.footer-image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+
+/* footer-image-container END */
+
+/*! Social container  */
+
+
+
+.footer-social-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    width: 200px;
+}
+
+.footer-social-container i {
+    font-size: 25px;
+}   
+
+.footer-hour {
+    text-align: center;
+}
+
+.footer-hour h4 {
+    margin: 5px 0;
+}
+
+.footer-hour div {
+    margin: 5px;
+}
+
+
+/* ? footer form  */
+
+
+.footer-form {
+    margin: 5px 0;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-input {
+    color: #4F04A3;
+    border: 1px solid #4F04A3;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+/** Section Help */
+
+.section-help {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.section-help-title {
+    margin: 5px 0;
+}
+
+.section-help li a{
+    margin: 5px 0;
+}
+
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #4F04A3;
+}
+
+
+@media (min-width: 361px) {
+
+    .section-footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+
+    }
+
+    .columna-uno {
+        width: 50vw;
+    }
+
+    .footer-hour {
+        width: 50vw;
+    }
+
+    .footer-social-container {
+        width: auto;
+    }
+
+    .footer-form {
+        width: 50vw;
+    }
+
+    .section-help {
+        width: 50vw;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .columna-uno {
+        width: 25vw;
+    }
+
+    .footer-hour {
+        width: 25vw;
+    }
+
+    .footer-form {
+        width: 25vw;
+    }
+
+    .section-help {
+        width: 25vw;
+    }
+}

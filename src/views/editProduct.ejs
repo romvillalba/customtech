@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('partials/head')  %>
+
+<body>
+
+    <%-include('partials/header')  %>
+
+    <main class="form-product-container">
+
+
+        <div class="bloque-prod">
+
+            <form class="form-product" action="/products/editProduct/<%= editProduct.id %>?_method=PUT" method="post" enctype="multipart/form-data" >
+
+                <h2>Editar producto</h2>
+                
+
+                <div>
+                    <input class="text-field-product" type="text" name="descripcion" placeholder="Descripción" value="<%= editProduct.descripcion  %>">
+                </div>
+                
+
+                <div class="product-file-container">
+                    <label class="product-label-file" for="fotoProduct">Cambiar imagen</label>
+                    <input type="file" value="<% editProduct.image %>"  name="image" id="fotoProduct">
+                </div>
+
+                <div class="cantidad-product-container">
+                    <label for="product-cantidad">Cantidad</label>
+                    <input class="text-field-product product-cantidad" type="text" name="productCantidad" value="<%= editProduct.productCantidad %>" id=""  placeholder="cantidad">
+                </div>
+                
+                <div class="product-description">
+                    
+                    <div class="categories-container">
+                        
+                        <label for="categories">Categorias</label>
+                        
+                        <select class="product-categories" name="categories" id="" >
+                            <option class="product-categories-options" value="perifericos">Perifericos</option>
+                            <option class="product-categories-options" value="componentes-pc">Componentes de PC</option>
+                            <option class="product-categories-options" value="componentes-pc">Notebooks</option>
+                            <option class="product-categories-options" value="componentes-pc">Computadoras</option>
+                            <option class="product-categories-options" value="componentes-pc">Monitores</option>
+                            <option class="product-categories-options" value="componentes-pc">Conectividad</option>
+                            <option class="product-categories-options" value="componentes-pc">Productos OUTLET</option>
+                        </select>
+                        
+                    </div>
+                    
+                    
+                </div>
+
+                <div>
+                    <input class="text-field-product" type="text" name="precio" placeholder="Precio" value="<%= editProduct.precio %>">
+                </div>
+             
+                <div class="button-products">
+                    <button>Guardar</button>
+                    <button>Cancelar</button>
+                </div>
+            </form>
+            <form method="POST" action="/products/editProduct/<%= editProduct.id %>?_method=DELETE">
+                <button class="delete-button" type="submit">BORRAR</button> 
+              </form>
+
+        </div>
+
+    </main>
+
+    <%-include('./partials/footer')  %>
+
+</body>
+
+<script src="/js/header.js" ></script>
+
+
+</html>
